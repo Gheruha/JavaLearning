@@ -11,5 +11,6 @@ public class Main {
 
         // Here I used the constructor num 3 of my SimpleCircle class
         SimpleCircle circle3 = new SimpleCircle(90, 120);
+        System.out.println(circle3);
     }
 }

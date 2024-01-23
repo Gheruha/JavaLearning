@@ -21,5 +21,7 @@ public class array {
 
         // Using Array.toString to display the array without looping it.
         System.out.println("Your array :" + Arrays.toString(numbers));
+
+        scanner.close();
     }
 }

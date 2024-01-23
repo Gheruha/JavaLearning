@@ -49,7 +49,8 @@ public class arrayList {
                     System.out.print(text);
                     break;
             }
-
+        
         }
+        scanner.close();
     }
 }
