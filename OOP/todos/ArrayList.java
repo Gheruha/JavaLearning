@@ -1,5 +1,7 @@
 package OOP.todos;
 
+import MINI_PROJECTS.inventory_management.Food;
+
 public class ArrayList<T> {
 
     public void add(String newTodo) {
@@ -20,6 +22,11 @@ public class ArrayList<T> {
     public int get(int i) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'get'");
+    }
+
+    public void add(Food food) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
     }
 
 }
