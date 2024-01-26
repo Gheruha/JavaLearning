@@ -1,6 +1,7 @@
 package MINI_PROJECTS.inventory_management;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Electronics extends Item {
@@ -137,6 +138,41 @@ public class Electronics extends Item {
                         electronic.change_price(newPrice);
                         System.out.println(
                                 "     CURRENT PRICE: " + electronic.get_price());
+                    }
+                }
+            }
+        }
+    }
+    // Iterator<Electronics> iterator =
+    // electronicsList.iterator();iterator.hasNext();
+    // Electronics electronic = iterator.next();
+
+    static void deleteElectronic() {
+        System.out.println(
+                "-------------------------------------------------------------------------------------");
+        System.out.println("                                  DELETE ELECTRONICS\n\n");
+        System.out.print("     Enter the ID of the electronic item that you want to delete: ");
+        int foodId = scanner.nextInt();
+
+        // FIND FOOD ITEM
+        for (Iterator<Electronics> iterator = electronicsList.iterator(); iterator.hasNext();) {
+            Electronics electronic = iterator.next();
+            if (electronic.get_id() == foodId) {
+                while (true) {
+                    System.out.println("\n     YOU SELECTED: " + electronic.get_name());
+                    System.out.println("     1.Delete item| 0.CLOSE DELETE FOOD\n");
+                    System.out.print("     Enter choice: ");
+                    int choice = scanner.nextInt();
+
+                    // Check if the user wants to exit.
+                    if (choice == 0) {
+                        break;
+                    }
+
+                    // Change price
+                    if (choice == 1) {
+                        iterator.remove();
+                        break;
                     }
                 }
             }

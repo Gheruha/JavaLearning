@@ -1,6 +1,7 @@
 package MINI_PROJECTS.inventory_management;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Food extends Item {
@@ -149,7 +150,8 @@ public class Food extends Item {
         int foodId = scanner.nextInt();
 
         // FIND FOOD ITEM
-        for (Food food : foodList) {
+        for (Iterator<Food> iterator = foodList.iterator(); iterator.hasNext();) {
+            Food food = iterator.next();
             if (food.get_id() == foodId) {
                 while (true) {
                     System.out.println("\n     YOU SELECTED: " + food.get_name());
@@ -164,7 +166,7 @@ public class Food extends Item {
 
                     // Change price
                     if (choice == 1) {
-                        foodList.remove(food);
+                        iterator.remove();
                         break;
                     }
                 }

@@ -72,6 +72,16 @@ public class Main {
                 // CHANGE ELECTRONICS PRICE
                 case 8:
                     Electronics.changeElectronicsPrice();
+                    break;
+
+                // DELETE FOOD ITEM
+                case 9:
+                    Food.deleteFood();
+                    break;
+
+                // DELETE ELECTRONICS ITEM
+                case 10:
+                    Electronics.deleteElectronic();
 
                 default:
                     break;
